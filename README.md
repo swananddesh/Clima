@@ -6,8 +6,7 @@ Open weather map API is used to fetch weather info.
 1. Alamofire: For network request
 2. SwiftyJSON: For handling api response.
 
-
-## Below code is added in info.plist to handle http request, because open weather doesn't provide API with secured layer i.e. https. If we do not add this code in info.plist, then our app won't work because Apple do not give permission to call those APIs which are not secured.
+**Below code is added in info.plist to handle http request, because open weather doesn't provide API with secured layer i.e. https. If we do not add this code in info.plist, then our app won't work because Apple do not give permission to call those APIs which are not secured.**
 
 ```
 <key>NSAppTransportSecurity</key>
