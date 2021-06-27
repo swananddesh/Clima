@@ -28,3 +28,5 @@ Open weather map API is used to fetch weather info.
 ## Screenshot:
 
 [![Simulator-Screen-Shot-i-Phone-8-2021-06-27-at-16-04-09.png](https://i.postimg.cc/W4h567Y7/Simulator-Screen-Shot-i-Phone-8-2021-06-27-at-16-04-09.png)](https://postimg.cc/4KRvXpgK)
+
+[![Simulator-Screen-Shot-i-Phone-8-2021-06-27-at-16-20-24.png](https://i.postimg.cc/QdrmwTNp/Simulator-Screen-Shot-i-Phone-8-2021-06-27-at-16-20-24.png)](https://postimg.cc/D8B1bmXZ)
