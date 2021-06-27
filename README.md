@@ -1,44 +1,31 @@
 # Clima
-Learn to make iOS Apps with [The App Brewery](https://www.appbrewery.co) 📱 | Project Stub | (Swift 4.0/Xcode 9) - Clima App
+An iOS app that will fetch weather condition info based on user's current location. Also user can enter city name to check weather conditions of desired city.
+Open weather map API is used to fetch weather info.
 
-Beginner: Download the starter project files as .zip and extract the files to your desktop.
+## Pods used for this project:
+1. Alamofire: For network request
+2. SwiftyJSON: For handling api response.
 
-Pro: Git clone to your Xcode projects folder.
 
-## Finished App
-![Finished App](https://github.com/londonappbrewery/Images/blob/master/Clima.gif)
+## Below code is added in info.plist to handle http request, because open weather doesn't provide API with secured layer i.e. https. If we do not add this code in info.plist, then our app won't work because Apple do not give permission to call those APIs which are not secured.
 
-## Fix for Cocoapods v1.0.1 and below
+```
+<key>NSAppTransportSecurity</key>
+<dict>
+    <key>NSExceptionDomains</key>
+    <dict>
+        <key>openweathermap.org</key>
+        <dict>
+            <key>NSIncludesSubdomains</key>
+            <true/>
+            <key>NSTemporaryExceptionAllowsInsecureHTTPLoads</key>
+            <true/>
+        </dict>
+    </dict>
+</dict>
 
-```ruby
-post_install do |installer|
-  installer.pods_project.targets.each do |target|
-    target.build_configurations.each do |config|
-      config.build_settings['SWIFT_VERSION'] = '3.0'
-      config.build_settings['MACOSX_DEPLOYMENT_TARGET'] = '10.10'
-    end
-  end
-end
 ```
 
-## Fix for App Transport Security Override
+## Screenshot:
 
-```XML
-	<key>NSAppTransportSecurity</key>
-	<dict>
-		<key>NSExceptionDomains</key>
-		<dict>
-			<key>openweathermap.org</key>
-			<dict>
-				<key>NSIncludesSubdomains</key>
-				<true/>
-				<key>NSTemporaryExceptionAllowsInsecureHTTPLoads</key>
-				<true/>
-			</dict>
-		</dict>
-	</dict>
-```
-
-
-Copyright © The App Brewery
-
+[![Simulator-Screen-Shot-i-Phone-8-2021-06-27-at-16-04-09.png](https://i.postimg.cc/W4h567Y7/Simulator-Screen-Shot-i-Phone-8-2021-06-27-at-16-04-09.png)](https://postimg.cc/4KRvXpgK)
